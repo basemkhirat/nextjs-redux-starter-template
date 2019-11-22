@@ -1,6 +1,6 @@
-#Nextjs Redux Starter Template
+## Nextjs Redux Starter Template
 
-## Build Setup
+### Build Setup
 
 ``` bash
 # install dependencies

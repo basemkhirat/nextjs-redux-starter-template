@@ -8,7 +8,6 @@ const About = (props) => {
             <Head>
                 <title>About Page</title>
             </Head>
-            <div>About Page</div>
         </Layout>
     );
 };
