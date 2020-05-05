@@ -146,41 +146,38 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-class Layout extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  render() {
-    return __jsx("div", {
-      className: "wrapper",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9,
-        columnNumber: 13
-      }
-    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10,
-        columnNumber: 17
-      }
-    }, __jsx("title", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11,
-        columnNumber: 21
-      }
-    }, "My Site")), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14,
-        columnNumber: 17
-      }
-    }), this.props.children);
-  }
-
-}
+const Layout = props => {
+  return __jsx("div", {
+    className: "wrapper",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 3
+    }
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 4
+    }
+  }, __jsx("title", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 5
+    }
+  }, "My Site")), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 4
+    }
+  }), props.children);
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -210,23 +207,22 @@ const Nav = props => {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6,
-      columnNumber: 9
+      columnNumber: 3
     }
   }, __jsx("img", {
     src: __webpack_require__(/*! ../assets/images/nextjs.png */ "./assets/images/nextjs.png"),
-    alt: "",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
-      columnNumber: 13
+      columnNumber: 4
     }
   }), __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
-      columnNumber: 13
+      columnNumber: 4
     }
   }, props.app.message));
 };
@@ -1951,58 +1947,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  static getInitialProps({
-    store
-  }) {
-    // Dispatch on server
-    store.dispatch({
-      type: "MESSAGE",
-      payload: "Hello Nextjs Homepage"
-    });
-  }
+const Index = props => {
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 3
+    }
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 4
+    }
+  }, __jsx("title", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 5
+    }
+  }, props.app.message)), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/about",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 4
+    }
+  }, __jsx("a", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 5
+    }
+  }, "Go To About")));
+};
 
-  render() {
-    return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18,
-        columnNumber: 13
-      }
-    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19,
-        columnNumber: 17
-      }
-    }, __jsx("title", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20,
-        columnNumber: 21
-      }
-    }, this.props.app.message)), __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      href: "/about",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22,
-        columnNumber: 17
-      }
-    }, __jsx("a", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22,
-        columnNumber: 37
-      }
-    }, "Go To About")));
-  }
-
-}
+Index.getInitialProps = ({
+  store
+}) => {
+  // Dispatch on server
+  store.dispatch({
+    type: "MESSAGE",
+    payload: "Hello Nextjs Homepage"
+  });
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(state => state)(Index));
 
