@@ -1,7 +1,6 @@
 import React from 'react';
 import Nav from '~/components/Nav';
 import Head from "next/head";
-import "~/assets/scss/style.scss";
 
 class Layout extends React.Component {
 
