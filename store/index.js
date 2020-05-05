@@ -1,6 +1,6 @@
 import {createStore, combineReducers, applyMiddleware} from "redux";
 import thunk from 'redux-thunk';
-import app from '~/reducers/app';
+import app from '~/store/reducers/app';
 
 /**
  * @param {object} initialState

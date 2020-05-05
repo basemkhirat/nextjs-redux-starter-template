@@ -6902,7 +6902,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next-redux-wrapper */ "./node_modules/next-redux-wrapper/es6/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../store */ "./store.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../store */ "./store/index.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_store__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/scss/style.scss */ "./assets/scss/style.scss");
 /* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_12__);
@@ -7010,10 +7010,46 @@ var MyApp = /*#__PURE__*/function (_App) {
 
 /***/ }),
 
-/***/ "./reducers/app.js":
-/*!*************************!*\
-  !*** ./reducers/app.js ***!
-  \*************************/
+/***/ "./store/index.js":
+/*!************************!*\
+  !*** ./store/index.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _redux = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+
+var _reduxThunk = _interopRequireDefault(__webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js"));
+
+var _app = _interopRequireDefault(__webpack_require__(/*! ./reducers/app */ "./store/reducers/app.js"));
+
+/**
+ * @param {object} initialState
+ * @param {boolean} options.isServer indicates whether it is a server side or client side
+ * @param {Request} options.req NodeJS Request object (not set when client applies initialState from server)
+ * @param {Request} options.res NodeJS Request object (not set when client applies initialState from server)
+ * @param {boolean} options.debug User-defined debug mode param
+ * @param {string} options.storeKey This key will be used to preserve store in global namespace for safe HMR
+ */
+var makeStore = function makeStore(initialState, options) {
+  return (0, _redux.createStore)((0, _redux.combineReducers)({
+    app: _app["default"]
+  }), initialState, (0, _redux.applyMiddleware)(_reduxThunk["default"]));
+};
+
+module.exports = makeStore;
+
+/***/ }),
+
+/***/ "./store/reducers/app.js":
+/*!*******************************!*\
+  !*** ./store/reducers/app.js ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7043,42 +7079,6 @@ var initialState = {
       return state;
   }
 });
-
-/***/ }),
-
-/***/ "./store.js":
-/*!******************!*\
-  !*** ./store.js ***!
-  \******************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _redux = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-
-var _reduxThunk = _interopRequireDefault(__webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js"));
-
-var _app = _interopRequireDefault(__webpack_require__(/*! ./reducers/app */ "./reducers/app.js"));
-
-/**
- * @param {object} initialState
- * @param {boolean} options.isServer indicates whether it is a server side or client side
- * @param {Request} options.req NodeJS Request object (not set when client applies initialState from server)
- * @param {Request} options.res NodeJS Request object (not set when client applies initialState from server)
- * @param {boolean} options.debug User-defined debug mode param
- * @param {string} options.storeKey This key will be used to preserve store in global namespace for safe HMR
- */
-var makeStore = function makeStore(initialState, options) {
-  return (0, _redux.createStore)((0, _redux.combineReducers)({
-    app: _app["default"]
-  }), initialState, (0, _redux.applyMiddleware)(_reduxThunk["default"]));
-};
-
-module.exports = makeStore;
 
 /***/ }),
 
