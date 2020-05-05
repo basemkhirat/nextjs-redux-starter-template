@@ -804,7 +804,7 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "body {\n  background: #ccc; }\n  body img {\n    border-radius: 12px; }\n", "",{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;EACE,gBAAgB,EAAA;EADlB;IAII,mBAAmB,EAAA","file":"style.scss","sourcesContent":["body {\n  background: #ccc;\n\n  img {\n    border-radius: 12px;\n  }\n}\n"]}]);
+exports.push([module.i, "body {\n  font-family: Verdana, Geneva, Tahoma, sans-serif; }\n\na {\n  text-decoration: none;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 14px; }\n\n.wrapper header {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  padding: 10px 0;\n  margin: 10px 0; }\n  .wrapper header img {\n    border-radius: 12px;\n    opacity: 0.5; }\n  .wrapper header h1 {\n    color: #ccc;\n    font-size: 22px; }\n\n.wrapper .content {\n  text-align: center; }\n", "",{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;EACE,gDACF,EAAA;;AAEA;EACE,qBAAqB;EACrB,gDAAgD;EAChD,eAAe,EAAA;;AAGjB;EAGI,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,sBAAsB;EACtB,eAAe;EACf,cAAc,EAAA;EARlB;IAUM,mBAAmB;IACnB,YAAY,EAAA;EAXlB;IAcM,WAAW;IACX,eAAe,EAAA;;AAfrB;EAoBI,kBAAkB,EAAA","file":"style.scss","sourcesContent":["body {\n  font-family: Verdana, Geneva, Tahoma, sans-serif\n}\n\na {\n  text-decoration: none;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n  font-size: 14px;\n}\n\n.wrapper {\n\n  header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    padding: 10px 0;\n    margin: 10px 0;\n    img {\n      border-radius: 12px;\n      opacity: 0.5;\n    }\n    h1 {\n      color: #ccc;\n      font-size: 22px;\n    }\n  }\n\n  .content {\n    text-align: center;\n\n    \n  }\n\n \n}\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -6950,15 +6950,15 @@ var MyApp = /*#__PURE__*/function (_App) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
-          columnNumber: 13
+          lineNumber: 20,
+          columnNumber: 4
         }
       }, __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, pageProps, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19,
-          columnNumber: 17
+          lineNumber: 21,
+          columnNumber: 5
         }
       })));
     }

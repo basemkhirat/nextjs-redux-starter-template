@@ -335,15 +335,15 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
-        columnNumber: 13
+        lineNumber: 20,
+        columnNumber: 4
       }
     }, __jsx(Component, _extends({}, pageProps, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
-        columnNumber: 17
+        lineNumber: 21,
+        columnNumber: 5
       }
     })));
   }

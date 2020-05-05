@@ -1,20 +1,21 @@
-import Layout from "~/components/Layout";
+import Layout from "~/layouts/Default";
 import Head from "next/head";
 import React from "react";
+import { connect } from "react-redux";
 
-const About = (props) => {
+const About = ({app}) => {
 	return (
 		<Layout>
 			<Head>
-				<title>About Page</title>
+				<title>{app.message}</title>
 			</Head>
 		</Layout>
 	);
 };
 
-About.getInitialProps = ({ store }) => {
-	// Dispatch on server
-	store.dispatch({ type: "MESSAGE", payload: "Hello Nextjs About" });
+About.getInitialProps = async ({ store }) => {
+	store.dispatch({ type: "MESSAGE", payload: "Hello About" });
+	return {};
 };
 
-export default About;
+export default connect(state => state)(About);

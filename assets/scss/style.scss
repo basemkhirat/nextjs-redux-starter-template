@@ -1,7 +1,37 @@
 body {
-  background: #ccc;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
 
-  img {
-    border-radius: 12px;
+a {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+.wrapper {
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 10px 0;
+    img {
+      border-radius: 12px;
+      opacity: 0.5;
+    }
+    h1 {
+      color: #ccc;
+      font-size: 22px;
+    }
   }
+
+  .content {
+    text-align: center;
+
+    
+  }
+
+ 
 }

@@ -1,24 +1,29 @@
 import React from "react";
-import Layout from "~/components/Layout";
+import Layout from "~/layouts/Default";
 import Head from "next/head";
 import Link from "next/link";
 import { connect } from "react-redux";
 
-const Index = (props) => {
+const Index = ({ app }) => {
 	return (
 		<Layout>
 			<Head>
-				<title>{props.app.message}</title>
+				<title>{app.message}</title>
 			</Head>
+			<Link href="/posts">
+				<a>Posts</a>
+			</Link>
+			-
 			<Link href="/about">
-				<a>Go To About</a>
+				<a>About</a>
 			</Link>
 		</Layout>
 	);
 };
 
-Index.getInitialProps = ({ store }) => {
-	// Dispatch on server
-	store.dispatch({ type: "MESSAGE", payload: "Hello Nextjs Homepage" });
+Index.getInitialProps = async ({ store }) => {
+	store.dispatch({ type: "MESSAGE", payload: "Hello Homepage" });
+	return {};
 };
+
 export default connect((state) => state)(Index);
