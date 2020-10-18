@@ -1,4 +1,4 @@
-## Nextjs Redux Starter Template
+## Nextjs Template
 
 ### Build Setup
 

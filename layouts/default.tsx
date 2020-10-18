@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const Default = ({ children, app }) => {
 	return (
-		<React.Fragment>
+		<>
 			<Head>
 				<title>Nextjs Site</title>
 			</Head>
@@ -17,7 +17,7 @@ const Default = ({ children, app }) => {
 
 				<div className="content">{children}</div>
 			</div>
-		</React.Fragment>
+		</>
 	);
 };
 

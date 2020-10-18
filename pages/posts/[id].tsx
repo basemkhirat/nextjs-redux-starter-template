@@ -1,6 +1,6 @@
 import React from "react";
-import Head from 'next/head';
-import Layout from '~/layouts/Default';
+import Head from "next/head";
+import Layout from "~/layouts/default";
 
 const Post = ({ id }) => {
 	return (
@@ -8,7 +8,7 @@ const Post = ({ id }) => {
 			<Head>
 				<title>Post Details page</title>
 			</Head>
-			
+
 			<div>Post details page of ID: {id}</div>
 		</Layout>
 	);

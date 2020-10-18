@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import Layout from "~/layouts/Default";
-import Head from 'next/head';
+import Layout from "~/layouts/default";
+import Head from "next/head";
 
-export default (props) => {
+const Index = () => {
 	return (
 		<Layout>
 			<Head>
@@ -22,3 +22,5 @@ export default (props) => {
 		</Layout>
 	);
 };
+
+export default Index;
